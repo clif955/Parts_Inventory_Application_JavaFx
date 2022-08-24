@@ -6,15 +6,17 @@ import javafx.stage.Stage;
 import model.*;
 
 import java.util.Objects;
-
+    /** Main Class
+     * FUTURE ENHANCEMENT will be to add background colors to reflect the company's logo and public imagine
+     * */
 public class Main extends Application {
-
+        /** Main Method */
     public static void main(String[] args) {
         testData();
         launch(args);
         System.out.println("Hello world!");
     }
-
+    /** First Main table view */
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/mainForm.fxml")));
@@ -22,6 +24,7 @@ public class Main extends Application {
         stage.setScene(new Scene(root,800, 600));
         stage.show();
     }
+    /** Test Data */
     public static void testData(){
         Part p1 = new InHouse(1, "door", 500.00, 20, 5, 25, 100);
         Inventory.addPart(p1);
